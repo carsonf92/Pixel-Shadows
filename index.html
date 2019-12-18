@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+ 
+<html>
+    <head>
+        <title>Pixel Shadows</title>
+        <meta description="Convert pixel art to CSS box-shadows">
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css"> 
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    </head>
+ 
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <h1>Pixel Shadows</h1>
+                    <p>Convert pixel art to CSS box-shadows</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="one-half column">
+                        <h5>Instructions</h5>
+                        <p>Upload a pixel art image that has 1:1 resolution. Use the range slider to set the size of the box-shadow. The longest side of the image should not be longer than 100px.</p>
+                        <p>Copy the HTML and CSS below and paste it into your project.</p>
+                    </div>
+                    <div class="one-half column">
+                        <h5>Configuration</h5>
+                        <p>Upload your pixel art image and press "RUN"</p>
+                        <input type="file" id="image-file" name="image" accept="image/jpg, image/png"/>
+                        <label for="image">Choose a file</label>
+                        <button id="run-button" class="disabled">Run</button>
+                        <p>Adjust the size of the box-shadow element</p>
+                        <div class="controls">
+                            <input type="range" min="1" max="10" value="1" id="pixel-width" class="slider">
+                            <div id="pixel-width-indicator">1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="one-half column">
+                        <canvas id="myCanvas">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                        <div id="box-shadow"></div>
+                    </div>
+                    <div class="one-half column">
+                        <h6>HTML</h6>
+                        <pre>
+                            <code id="html">&lt;span class="box-shadow"&gt;&lt;/span&gt;</code>
+                        </pre>
+                        <h6>CSS</h6>
+                        <pre>
+                            <code id="css">/* box-shadow styles */</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
